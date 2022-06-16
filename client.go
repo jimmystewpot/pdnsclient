@@ -12,7 +12,7 @@ const (
 	defaultTransportTimeout   time.Duration = 15 * time.Second
 	defaultTransportIdleConns int           = 10
 	useragent                 string        = "go-powerdns-client"
-	apiStatsPath              string        = "api/v1/servers/localhost/statistics"
+	// apiStatsPath              string        = "api/v1/servers/localhost/statistics"
 )
 
 type Client struct {
