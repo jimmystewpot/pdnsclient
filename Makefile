@@ -4,8 +4,11 @@ SHELL := /bin/bash
 export PATH = /usr/sbin:/bin:/sbin:/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/build/bin:/home/runner/go:/home/runner/go/bin:/snap/bin:~/go/bin
 TEST_DIRS := ./...
 REPORTS := ./reports
+INTERACTIVE := $(shell [ -t 0 ] && echo 1)
 
 $(REPORTS):
+	@echo ""
+	@echo "***** Directory $@ does not exist creating *****"
 	mkdir -p $@
 
 lint: | $(REPORTS)
